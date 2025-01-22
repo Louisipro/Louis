@@ -1,0 +1,98 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fond noir */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Titre principal avec effet de dégradé */
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ffffff, #bbbbbb); /* Dégradé blanc à gris */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+/* Sous-titre */
+.subtitle {
+    font-size: 2rem;
+    color: #aaa; /* Gris clair */
+    margin-top: 10px;
+}
+
+/* Liens des réseaux sociaux */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer sur plusieurs lignes si nécessaire */
+    justify-content: center;
+    gap: 15px; /* Espacement entre les boutons */
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 10px;
+    background-color: #333; /* Fond sombre */
+    padding: 10px 20px;
+    border-radius: 25px; /* Bords arrondis */
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #555; /* Change le fond au survol */
+    color: #00d4ff; /* Change la couleur du texte au survol */
+}
+
+/* Icônes dans les boutons */
+.social-links .icon {
+    font-size: 1.2rem; /* Taille des icônes */
+}
+
+/* --- Media Queries pour mobile --- */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column; /* Permet une meilleure disposition verticale */
+        height: auto; /* Ajuste la hauteur pour s'adapter au contenu */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 3rem; /* Réduit la taille du titre pour les écrans plus petits */
+    }
+
+    .subtitle {
+        font-size: 1.5rem; /* Réduit la taille du sous-titre */
+    }
+
+    .social-links a {
+        font-size: 0.9rem; /* Réduit la taille du texte des boutons */
+        padding: 8px 15px; /* Ajuste la taille des boutons */
+        border-radius: 20px; /* Légèrement plus petits */
+    }
+
+    .social-links {
+        gap: 10px; /* Moins d'espacement entre les boutons */
+        flex-direction: column; /* Place les boutons en colonne sur les petits écrans */
+    }
+}
