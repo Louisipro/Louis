@@ -37,11 +37,12 @@ h1 {
 }
 
 /* Liens des réseaux sociaux */
+/* Liens des réseaux sociaux */
 .social-links {
     margin-top: 30px;
     display: flex;
-    flex-wrap: wrap; /* Permet de passer sur plusieurs lignes si nécessaire */
-    justify-content: center;
+    flex-wrap: wrap; /* Permet de passer les boutons sur une nouvelle ligne si nécessaire */
+    justify-content: center; /* Centre les boutons horizontalement */
     gap: 15px; /* Espacement entre les boutons */
 }
 
@@ -52,11 +53,16 @@ h1 {
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
-    margin: 0 10px;
     background-color: #333; /* Fond sombre */
     padding: 10px 20px;
     border-radius: 25px; /* Bords arrondis */
     transition: all 0.3s ease;
+    width: calc(50% - 20px); /* Chaque bouton occupe environ 50% de la largeur */
+    text-align: center; /* Centre le texte */
+}
+
+.social-links a:nth-child(3) {
+    width: 100%; /* Le troisième bouton occupe toute la largeur */
 }
 
 .social-links a:hover {
@@ -71,28 +77,7 @@ h1 {
 
 /* --- Media Queries pour mobile --- */
 @media (max-width: 600px) {
-    body {
-        flex-direction: column; /* Permet une meilleure disposition verticale */
-        height: auto; /* Ajuste la hauteur pour s'adapter au contenu */
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 3rem; /* Réduit la taille du titre pour les écrans plus petits */
-    }
-
-    .subtitle {
-        font-size: 1.5rem; /* Réduit la taille du sous-titre */
-    }
-
     .social-links a {
-        font-size: 0.9rem; /* Réduit la taille du texte des boutons */
-        padding: 8px 15px; /* Ajuste la taille des boutons */
-        border-radius: 20px; /* Légèrement plus petits */
-    }
-
-    .social-links {
-        gap: 10px; /* Moins d'espacement entre les boutons */
-        flex-direction: column; /* Place les boutons en colonne sur les petits écrans */
+        width: 100%; /* Les boutons occupent toute la largeur sur les petits écrans */
     }
 }
